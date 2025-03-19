@@ -10,16 +10,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  /* animation-name: backgroundanimation;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out; */
-}
-@keyframes backgroundanimation {
-  0% {background-color: black;}
-  25% {background-color: darkblue;}
-  50% {background-color: black;}
-  75% {background-color: darkblue;}
-  100% {background-color: black;}
 }
 header {
   min-height: 18vh;
@@ -31,12 +21,12 @@ header h1 {
   font-size: 300%;
   color: white;
   text-align: center;
-  /* border: 1px solid rgba(255, 0, 0, 0.5); */
   border-radius: 15px;
   padding: 10px 10px 10px 10px;
 }
 main {
   flex: 1;
+  justify-content: center;
 }
 .grid {
   display: inline-grid;
@@ -44,17 +34,109 @@ main {
   grid-gap: 10px;
   background-color: black;
   padding: 5px 5px 5px 5px;
+  margin-bottom: 80px;
 }
 .main-image {
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.image-text-positioning {
+  position: absolute;
+  top: 20vh;
+  width: 75vw;
+}
+.image-text {
+  margin-left: -2vw;
+  width: 30vw;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border: 0px solid rgba(0, 0, 0, 0.0);
+}
+.image-text h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.image-text p {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+#imageholder {
+  width: 75vw;
+  height: 75vh;
+  display: block;
+  position: relative;
+  background-image: url("Combo-Bot.png");
+  background-size: cover;
+  background-position: center center;
+}
+#imageholder2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background-image: url("Roll-A-Ball.png");
+  background-size: cover;
+  background-position: center center;
+  opacity: 1;
+  animation-name: image3fader;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+#imageholder3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  background-image: url("WordSearch3D2.png");
+  background-size: cover;
+  background-position: center center;
+  opacity: 1;
+  animation-name: image2fader;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+#imageholder img {
+  opacity: 1;
+  animation-name: imagefader;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+}
+@keyframes imagefader {
+  0% {opacity: 1;}
+  12.5% {opacity: 1;} /*3 s*/
+  33.3% {opacity: 0;} /*8 s*/
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes image2fader {
+  0% {opacity: 1;}
+  45.8% {opacity: 1;} /*11 s*/
+  66.6% {opacity: 0;} /*16 s*/
+  100% {opacity: 0;}
+}
+@keyframes image3fader {
+  0% {opacity: 1;}
+  79.2% {opacity: 1;} /*19 s*/
+  100% {opacity: 0;} /*24 s*/
 }
 section img {
   max-height: 80vh;
 }
+.titlecenter {
+  text-align: center;
+}
+.titlecenter h1 {
+  font-size: 200%;
+}
 article {
-  /* width: 300px;
-  height: 400px; */
   background-color: black;
   min-height: 50vh;
   background-image: url("epilepsitunnel.png");
@@ -132,7 +214,6 @@ button {
   cursor: pointer;
   width: 5em;
   height: 2em;
-  /* margin-top: 25vh; */
 }
 #combobutton {
   background-color: #5b8cfa;
@@ -159,9 +240,34 @@ button {
   animation-fill-mode: forwards;
   animation-duration: 2s;
 }
+.gridskills {
+  display: inline-grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+  grid-gap: 5px;
+  background-color: black;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 80px;
+}
+.gridskills p {
+  text-align: center;
+}
+.gridskills h2 {
+  text-align: center;
+}
 footer {
   clear: left;
   min-height: 50px;
+  display: block;
+}
+footer h2 {
+  text-align: center;
+}
+footer a {
+  text-align: center;
+  font-weight: normal;
+  font-size: 90%;
+  display: block;
+  margin-bottom: 40px;
 }
 footer h3 {
   text-align: center;
