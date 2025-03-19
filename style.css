@@ -30,7 +30,7 @@ main {
 }
 .grid {
   display: inline-grid;
-  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
   grid-gap: 10px;
   background-color: black;
   padding: 5px 5px 5px 5px;
@@ -147,18 +147,23 @@ article {
 }
 #combo_bot {
   background-image: url("Combo-Bot.png");
+  grid-column: 1 / span 2;
 }
 #ace_of_shades {
   background-image: url("Ace-of-Shades.png");
+  grid-column: 3 / span 2;
 }
 #melody_madness {
   background-image: url("Melody-Madness.png");
+  grid-column: 5 / span 2;
 }
 #roll_a_ball {
   background-image: url("Roll-A-Ball.png");
+  grid-column: 2 / span 2;
 }
 #word_search_3d {
   background-image: url("WordSearch3D.png");
+  grid-column: 4 / span 2;
 }
 .darken {
   background-color: rgba(0, 0, 0, 0.6);
@@ -224,7 +229,7 @@ button {
   color: white;
 }
 #melodybutton {
-  background-color: #8b9150;
+  background-color: #ccbd7b; /* old color: #8b9150 */
   color: black;
 }
 #wordbutton {
